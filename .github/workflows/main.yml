@@ -12,5 +12,16 @@ jobs:
     - name: action-maven
       run: |
         mvn -f pom.xml package
+    - run: |
+        echo ${{ github.workspace }}    
+    - name: Upload artifact
+      uses: actions/upload-artifact@v1.0.0
+      with:
+    # Artifact name
+       name: gameoflife
+    # Directory containing files to upload
+       path: ${{ github.workspace }}/gameoflife-web/target/gameoflife.war     
+        
+      
       
  
