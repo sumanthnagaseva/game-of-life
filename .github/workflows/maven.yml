@@ -32,5 +32,6 @@ jobs:
       with:
         app-name: githubjavadeploy
         publish-profile: ${{secrets.PUBLISH_PROFILE}}
+        package: ${{GITHUB.WORKSPACE}}/gameoflife-web/target/gameoflife.war
 
         
