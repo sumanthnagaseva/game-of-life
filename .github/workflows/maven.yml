@@ -30,7 +30,7 @@ jobs:
     - name: Azure WebApp
       uses: Azure/webapps-deploy@v2
       with:
-        app-name: githubjavadeploy
+        app-name: javagameoflifegithub
         publish-profile: ${{secrets.PUBLISH_PROFILE}}
         package: ${{GITHUB.WORKSPACE}}/gameoflife-web/target/gameoflife.war
 
